@@ -15,7 +15,7 @@ const userRoutes = require("./Routes/userRoutes");
 app.use("/employees", employeeRoutes);
 app.use("/users", userRoutes);
 app.use(cors({
-    origin:['https://employee-app-mern-client.vercel.app/'],
+    origin:["https://vercel.com/abhaya-s-projects/employee-app-mern-client/2gStpyoDw4oh6ZpcYRAdGxeNAnSU"],
     credentials:true,
     methods:["POST","GET","PUT","DELETE"]
 }))
