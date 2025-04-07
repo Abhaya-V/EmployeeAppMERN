@@ -14,7 +14,11 @@ const employeeRoutes = require("./Routes/employeeRoutes");
 const userRoutes = require("./Routes/userRoutes");
 app.use("/employees", employeeRoutes);
 app.use("/users", userRoutes);
-
+app.use(cors({
+    origin:['https://employee-app-mern-client.vercel.app/'],
+    credentials:true,
+    methods:["POST","GET","PUT","DELETE"]
+}))
 
 app.get("/", (req, res) => {
     res.send("API is running");
