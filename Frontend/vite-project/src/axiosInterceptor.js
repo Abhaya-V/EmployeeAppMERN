@@ -1,6 +1,6 @@
 import axios from "axios"
 const axiosInstance = axios.create({
-    baseURL:"https://employee-app-mern-client.vercel.app/"
+    baseURL:"https://employee-app-mern-client.vercel.app"
 })
 
 axiosInstance.interceptors.request.use(function (config) {
