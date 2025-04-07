@@ -14,7 +14,7 @@ const Signup = () => {
   });
 
   const handleSignup = () => {
-    axios.post("https://employee-app-mern-one.vercel.app/users/signup", form)
+    axios.post("https://employee-app-mern-server.vercel.app/users/signup", form)
       .then((res) => {
         alert("Signup successful!");
         navigate("/"); 

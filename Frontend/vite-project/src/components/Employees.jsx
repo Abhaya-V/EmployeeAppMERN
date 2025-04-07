@@ -14,7 +14,7 @@ const Employees = () => {
   const [data,setData] = useState([])
   const navigate = useNavigate()
   useEffect(()=>{
-    axiosInstance.get("https://employee-app-mern-one.vercel.app/employees").then((res)=>{
+    axiosInstance.get("https://employee-app-mern-server.vercel.app/employees").then((res)=>{
      setData(res.data)
     }).catch((err) =>{
       console.log(err)
@@ -27,7 +27,7 @@ const Employees = () => {
 
   function handleDelete(id) {
     if (window.confirm("Are you sure you want to delete this employee?")) {
-      axiosInstance .delete(`https://employee-app-mern-client.vercel.app/employees/delete/${id}`)
+      axiosInstance .delete(`https://employee-app-mern-server.vercel.app/employees/delete/${id}`)
         .then((res) => {
           alert("Employee deleted successfully!");
           // Refresh the list

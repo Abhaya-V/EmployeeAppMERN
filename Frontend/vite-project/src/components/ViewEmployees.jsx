@@ -13,7 +13,7 @@ const ViewEmployees = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get("https://employee-app-mern-one.vercel.app/employees")
+    axiosInstance.get("https://employee-app-mern-server.vercel.app/employees")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

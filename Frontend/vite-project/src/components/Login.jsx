@@ -10,7 +10,7 @@ const Login = () => {
     password:""
   })
   function capValue(){
-    axios.post("https://employee-app-mern-one.vercel.app/users/login", form)
+    axios.post("https://employee-app-mern-server.vercel.app/users/login", form)
       .then(res => {
         const user = res.data.user;
 
