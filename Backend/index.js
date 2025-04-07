@@ -3,7 +3,7 @@ const app = express()
 const morgan = require("morgan")
 app.use(morgan("dev"))
 const cors = require("cors")
-app.use(cors());
+
 app.use(cors({
     origin: "https://employee-app-mern-client.vercel.app",
     credentials: true,
