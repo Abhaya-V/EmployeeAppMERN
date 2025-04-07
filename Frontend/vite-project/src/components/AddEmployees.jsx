@@ -35,14 +35,14 @@ const AddEmployees = () => {
       },[])
       function capValue(){
         if(location.state!=null){
-            axiosInstance.put("https://employee-app-mern-client.vercel.app/employees/update/"+location.state.item._id,form).then((res)=>{
+            axiosInstance.put("https://vercel.com/abhaya-s-projects/employee-app-mern/J7sUYez98RhNogLHQ5w3TpDW8scF/employees/update/"+location.state.item._id,form).then((res)=>{
               alert("updated successfully")
               navigate("/employees")
             }).catch((error)=>{
               console.log(error)
             })
         }else{
-          axiosInstance.post("https://employee-app-mern-client.vercel.app/employees/add",form).then((res) =>{
+          axiosInstance.post("https://vercel.com/abhaya-s-projects/employee-app-mern/J7sUYez98RhNogLHQ5w3TpDW8scF/employees/add",form).then((res) =>{
             alert("Employee added",res.data)
              navigate("/employees")
             }).catch((err) =>{

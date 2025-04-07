@@ -14,7 +14,7 @@ const Signup = () => {
   });
 
   const handleSignup = () => {
-    axios.post("https://employee-app-mern-client.vercel.app/users/signup", form)
+    axios.post("https://vercel.com/abhaya-s-projects/employee-app-mern/J7sUYez98RhNogLHQ5w3TpDW8scF/users/signup", form)
       .then((res) => {
         alert("Signup successful!");
         navigate("/"); 
