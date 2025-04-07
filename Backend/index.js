@@ -4,6 +4,11 @@ const morgan = require("morgan")
 app.use(morgan("dev"))
 const cors = require("cors")
 app.use(cors());
+app.use(cors({
+    origin: "https://employee-app-mern-client.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"]
+  }));
 app.use(express.json());
 require("dotenv").config()
 require("./db/connection")
@@ -14,11 +19,6 @@ const employeeRoutes = require("./Routes/employeeRoutes");
 const userRoutes = require("./Routes/userRoutes");
 app.use("/employees", employeeRoutes);
 app.use("/users", userRoutes);
-app.use(cors({
-    origin:["https://vercel.com/abhaya-s-projects/employee-app-mern-client/2gStpyoDw4oh6ZpcYRAdGxeNAnSU"],
-    credentials:true,
-    methods:["POST","GET","PUT","DELETE"]
-}))
 
 app.get("/", (req, res) => {
     res.send("API is running");
